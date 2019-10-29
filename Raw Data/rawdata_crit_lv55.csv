@@ -1,8 +1,8 @@
 # BNS Attribute Value vs Rate Data
 # Author: dbnryanc92
-# Attribute: Critical (¼ÉÀ» / crit)
+# Attribute: Critical (æš´æ“Š / crit)
 # Attribute level: 55
-# Date: Oct 27, 2019
+# Date: Oct 29, 2019
 critValue,critRate
 0,0.0000
 80,0.0142

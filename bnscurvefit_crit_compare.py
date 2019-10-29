@@ -35,10 +35,9 @@ for count, lv in enumerate(compare_item):
     print("Lv. " + lv + ": a = {0:.9f}, b = {1:.9f}, c = {2:.9f}".format(*popt))
 
     #Plot the result
-    
-    #ax.plot(df['value'], df['rate'], '.b', label='訓練數據 Training Points')
+    #ax.plot(df['value'], df['rate'], '.', label='Lv. %s 數據'%(lv))
     x_pred = np.linspace(0, 30000)
-    ax.plot(x_pred, model_func(x_pred, *popt), '-', color=colors[count], label='Lv. %s 級'%(lv))
+    ax.plot(x_pred, model_func(x_pred, *popt), '-', color=colors[count], label='Lv. %s'%(lv))
 
 ax.set_title('BNS劍靈 暴擊數值 Crit Value vs 暴擊率 Crit Rate (版本比較) by 玉蜂丷 (dbnryanc92)\nSciPy Curve Fitting | ' +  r'$y=\frac{Bx}{x+A}+C$')
 ax.set_xlabel('x = 暴擊數值 Crit Value')
