@@ -1,4 +1,4 @@
-# BNS Attribute Curve Fitting (Polynomial Interpolation)
+# BNS Attribute Curve Fitting (Polynomial Regression)
 # Author: dbnryanc92 (玉蜂丷)
 # Attribute: Critical (Lv.60)
 
@@ -41,7 +41,7 @@ for count, degree in enumerate([3, 4, 5]):
 ax.plot(X_train, y_train, color='brown', label="真實數據 Ground Truth")
 ax.plot(X_train, y_train, '.b', label='訓練數據 Training Points')
 
-ax.set_title('BNS劍靈 暴擊數值 Crit Value vs 暴擊率 Crit Rate (Lv.60版本)\nPolynomial interpolation of degree 3, 4, 5 using Ridge Regression\n作者：玉蜂丷（dbnryanc92）')
+ax.set_title('BNS劍靈 暴擊數值 Crit Value vs 暴擊率 Crit Rate (Lv.60版本)\nPolynomial regression of degree 3, 4, 5\n作者：玉蜂丷（dbnryanc92）')
 ax.set_xlabel('x = 暴擊數值 Crit Value')
 ax.set_ylabel('y = 暴擊率 Crit Rate')
 ax.legend(loc='lower right')
