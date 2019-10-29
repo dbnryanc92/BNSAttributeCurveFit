@@ -20,7 +20,7 @@ df = df.rename(columns={'attackhitValue': 'value', 'attackhitRate': 'rate'})
 
 # Define a model function
 def model_func(x, a, b, c):
-    return x / (a + b * x) + c
+    return b * x / (x + a) + c
 
 # Fits the function
 popt, pcov = curve_fit(model_func, df['value'], df['rate'])
@@ -33,7 +33,7 @@ ax.plot(df['value'], df['rate'], '.b', label='訓練數據 Training Points')
 x_pred = np.linspace(0, 15000)
 ax.plot(x_pred, model_func(x_pred, *popt), '-', color='brown', label='最佳擬合曲線 Best Fit Curve\nA = %.4f\nB = %.4f\nC = %.4f'%(popt[0],popt[1],popt[2]))
 
-ax.set_title('BNS劍靈 功力數值 Attack Hit Value vs 功力傷害率 Attack Hit Rate (Lv.60版本)\nSciPy Curve Fitting | y=x/(A+Bx)+C\n作者：玉蜂丷（dbnryanc92）')
+ax.set_title('BNS劍靈 功力數值 Attack Hit Value vs 功力傷害率 Attack Hit Rate (Lv.60版本) by 玉蜂丷 (dbnryanc92)\nSciPy Curve Fitting | ' +  r'$y=\frac{Bx}{x+A}+C$')
 ax.set_xlabel('x = 功力數值 Attack Hit Value')
 ax.set_ylabel('y = 功力傷害率 Attack Hit Rate')
 ax.legend(loc='lower right')

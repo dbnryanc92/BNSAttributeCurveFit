@@ -2,7 +2,7 @@
 # Author: dbnryanc92
 # Attribute: Critical Damage (¼ÉÀ»¶Ë®` / critdmg)
 # Attribute level: 60
-# Date: Oct 27,2019
+# Date: Oct 27, 2019
 critdmgValue,critdmgRate
 0,1.25
 95,1.2879
