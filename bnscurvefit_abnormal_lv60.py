@@ -33,7 +33,7 @@ ax.plot(df['value'], df['rate'], '.b', label='訓練數據 Training Points')
 x_pred = np.linspace(0, 10000)
 ax.plot(x_pred, model_func(x_pred, *popt), '-', color='brown', label='最佳擬合曲線 Best Fit Curve\nA = %.4f\nB = %.4f\nC = %.4f'%(popt[0],popt[1],popt[2]))
 
-ax.set_title('BNS劍靈 異常狀態傷害數值 Abnormal Attack Value vs 異常狀態傷害率 Abnormal Attack Rate (Lv.60版本) by 玉蜂丷 (dbnryanc92)\nSciPy Curve Fitting | ' +  r'$y=\frac{Bx}{x+A}+C$')
+ax.set_title('BNS劍靈 異常狀態傷害數值 Abnormal Attack Value vs 異常狀態傷害率 Abnormal Attack Rate (Lv.60版本)\nSciPy Curve Fitting | ' +  r'$y=\frac{Bx}{x+A}+C$' + ' | by 玉蜂丷 (dbnryanc92)')
 ax.set_xlabel('x = 異常狀態傷害數值 Abnormal Attack Value')
 ax.set_ylabel('y = 異常狀態傷害率 Abnormal Attack Rate')
 ax.legend(loc='lower right')

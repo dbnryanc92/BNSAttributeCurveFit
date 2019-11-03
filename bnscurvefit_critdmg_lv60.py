@@ -33,7 +33,7 @@ ax.plot(df['value'], df['rate'], '.b', label='訓練數據 Training Points')
 x_pred = np.linspace(0, 25000)
 ax.plot(x_pred, model_func(x_pred, *popt), '-', color='brown', label='最佳擬合曲線 Best Fit Curve\nA = %.4f\nB = %.4f\nC = %.4f'%(popt[0],popt[1],popt[2]))
 
-ax.set_title('BNS劍靈 暴擊傷害數值 CritDmg Value vs 暴擊傷害率 CritDmg Rate (Lv.60版本) by 玉蜂丷 (dbnryanc92)\nSciPy Curve Fitting | ' +  r'$y=\frac{Bx}{x+A}+C$')
+ax.set_title('BNS劍靈 暴擊傷害數值 CritDmg Value vs 暴擊傷害率 CritDmg Rate (Lv.60版本)\nSciPy Curve Fitting | ' +  r'$y=\frac{Bx}{x+A}+C$' + ' | by 玉蜂丷 (dbnryanc92)')
 ax.set_xlabel('x = 暴擊傷害數值 Crit Dmg. Value')
 ax.set_ylabel('y = 暴擊傷害率 Crit Dmg. Rate')
 ax.legend(loc='lower right')
